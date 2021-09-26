@@ -1,0 +1,97 @@
+<div class="solar_options">
+<h5 class="solar_card_heading"> your hybrid Eletric Water Heater Recommended Options</h5>
+<hr>
+<div class="solar_cards">
+
+  <p-card *ngFor="let productQuote of productQuotesList$ | async
+                                  | silder:newSliderValue  ">
+    <ng-template pTemplate="header">
+      <div class="card_header">
+        <div class="card_header_left">
+          <h4 class="m-0"> {{productQuote.manufacturer_name}} </h4>
+          <h5> {{productQuote.name}}  </h5>
+        </div>
+        <div class="card_header_right">
+              <lable>3.4 ef </lable>
+              <span class="card_header_right_tooltip">
+                  <img src="assets/info-tooltip.svg">
+                </span>
+              <span class="card_header_right_images">
+
+              <img src="assets/Energy_Star_logo.svg.png">
+            </span>
+          </div>
+      </div>
+
+    </ng-template>
+    <div class="card_body">
+      <img height="400"  width="200" src='assets/img1.png'>
+       <div class="bullet_points_list"  >
+        <div class="individual_bullet_point" *ngFor="let est_highlightStr of productQuote.est_highlight">
+          <img class="dot_circle_solid" src="assets/dot-circle-solid.svg">
+          <div class="bullet_point_text"> {{est_highlightStr}}</div>
+      </div>
+
+    </div>
+
+    </div>
+    <hr>
+    <div class="cost_info">
+     <div>
+       <h5>
+         Base Price
+
+       </h5>
+       <div> (Installation not included)</div>
+           <h6>
+              Available Incentives
+              <span class="card_header_right_tooltip">
+                  <img src="assets/info-tooltip.svg">
+                </span>
+              </h6>
+               <div>
+                Eqvipment Cost
+                <span class="card_header_right_tooltip">
+                    <img src="assets/info-tooltip.svg">
+                  </span>
+                </div>
+          </div>
+          <div>
+          <div>
+             <span class="align-middle"> -------------------------</span>
+          </div>
+          <div>
+              <div class="invisible "> (Installation)</div>
+          </div>
+          <div>
+              <span class="align-middle"> -------------------------</span>
+          </div>
+          <div class="mt-1">
+              <span class="align-middle"> -------------------------</span>
+          </div>
+        </div>
+          <div>
+          <div>    {{productQuote.base_price}}</div>
+          <div> <div class="invisible "> adda</div> </div>
+        <div> {{productQuote.incentives.totalAppliedIncentives}}</div>
+        <div> {{productQuote.netCost}}</div>
+      </div>
+    </div>
+
+
+          <div class="annual_savings">
+            Your Est. Annual Savings is
+            <span class="est_annual_savings_cal">${{productQuote.est_annual_savings_cal}}</span>
+          </div>
+          <div class="m-auto text-center">
+          <button  class="get_install_quote"> Get Install Quote</button>
+        </div>
+    <ng-template pTemplate="footer">
+        <div class="card_footer">
+            <a [href]="'#'"> view more details</a>
+          </div>
+
+    </ng-template>
+  </p-card>
+  </div>
+</div>

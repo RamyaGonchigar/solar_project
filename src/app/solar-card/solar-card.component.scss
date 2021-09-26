@@ -1,0 +1,117 @@
+
+::ng-deep {
+  p-card {
+    margin: 10px
+  }
+  .p-card-content{
+    padding-bottom: 0 !important;
+  }
+  .p-card-body{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.solar_options {
+  background-color: #EEEEEE ;
+
+  .solar_card_heading{
+    color: green;
+    margin: 10px;
+    padding: 10px 5px 5px;
+  }
+  .solar_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+  // card_list
+      .card_header {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        .card_header_left {
+          color: white;
+          padding: 10px;
+        }
+        .card_header_right {
+          padding: 10px;
+          color: white;
+          display: flex;
+          align-items: center;
+
+          .card_header_right_tooltip img{
+            margin-left: 10px;
+            width: auto;
+          }
+          .card_header_right_images img {
+            width: auto;
+            margin: 10px;
+            border-radius: 20%;
+            height: 35px;
+         }
+        }
+    }
+    .card_body {
+      display: flex;
+
+      .individual_bullet_point{
+        display: flex;
+          align-items: center;
+          margin: 20px;
+
+          .dot_circle_solid{
+            width: 20px;
+            height: 20px;
+            filter: invert(0.5) sepia(1) saturate(5) hue-rotate(340deg);
+        }
+        .bullet_point_text{
+          margin-left: 20px;
+        }
+      }
+
+    }
+    .cost_info{
+      display: grid;
+      grid-template-columns: repeat(3 , auto);
+    }
+
+    .annual_savings{
+      border: green solid;
+      text-align: center;
+      padding: 5px;
+      margin: 20px 5px;
+      .est_annual_savings_cal{
+        color: green;
+        font-size: large;
+        font-weight: bold;
+        }
+
+    }
+    .get_install_quote{
+      background-color: orange;
+      font-size: large;
+      color: white;
+      border-color: snow;
+      padding: 10px 100px;
+      border-radius: 10px;
+      margin: 10px 0;
+
+    }
+
+    .card_footer{
+      text-align: center;
+      background: #EEEEEE;
+      margin: 0 -15px;
+      padding: 2px 0;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+

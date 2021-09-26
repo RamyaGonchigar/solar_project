@@ -1,0 +1,23 @@
+::ng-deep {
+
+  .p-slider{
+    &:not(.p-disabled) {
+      .p-slider-handle {
+        margin-top: -1rem;
+        height: 2.143rem;
+        border-radius: unset;
+        &:hover {
+          background: white;
+          border-color: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+.filter{
+  margin: 50px 10px;
+}
+

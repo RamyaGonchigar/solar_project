@@ -1,0 +1,14 @@
+<h4>Size your water heater</h4>
+<div>
+    <div class="filter">
+        <p-slider
+        [ngModel]="productQuotesService.silderValue$ |async "
+         (ngModelChange)="silderValueChanged($event)" [min]="30" [max]="80">
+        </p-slider>
+    </div>
+  <div>
+      <p> {{productQuotesService.silderValue$ |async}} Gallons</p>
+  </div>
+</div>
+
+
